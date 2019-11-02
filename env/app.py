@@ -17,3 +17,6 @@ def hello_there(name = None):
         name=name,
         date=datetime.now()
     )
+@app.route("/api/data")
+def get_data():
+    return app.send_static_file("data.json")
